@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:controller="com.example.launcherfx2.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="580.0" layoutY="291.0" mnemonicParsing="false" text="%play" />
+      <ProgressBar fx:id="progressBar" layoutX="73.0" layoutY="292.0" prefHeight="25.0" prefWidth="488.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressBar>
+      <ComboBox fx:id="languagesCombobox" layoutX="478.0" layoutY="26.0" onAction="#chooseLanguage" prefWidth="150.0" promptText="%chooseLanguage" />
+   </children>
+</AnchorPane>
