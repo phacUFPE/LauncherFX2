@@ -1,5 +1,7 @@
 package com.example.launcherfx2;
 
+import com.example.launcherfx2.utils.LauncherLogger;
+import com.example.launcherfx2.utils.constants.GeneralConstants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +15,7 @@ import java.util.ResourceBundle;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        ResourceBundle generalResource = ResourceBundle.getBundle("general", Locale.getDefault());
+        ResourceBundle generalResource = ResourceBundle.getBundle(GeneralConstants.GENERAL_RESOURCES, Locale.getDefault());
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main.fxml"));
         fxmlLoader.setResources(generalResource);
@@ -22,7 +24,6 @@ public class MainApplication extends Application {
 
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNIFIED);
-//        stage.setTitle("Launcher");
         stage.setScene(scene);
         stage.show();
     }
